@@ -204,7 +204,7 @@ function hookWorkerFetch() {
     var realFetch = fetch;
     fetch = async function(url, options) {
         if (typeof url === 'string') {
-            if (url.includes('video-weaver')) {
+            if (url.includes('video-weaver') || url.includes('playlist.ttvnw.net')) {
                 return new Promise(function(resolve, reject) {
                     var processAfter = async function(response) {
 
